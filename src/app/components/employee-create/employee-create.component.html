@@ -1,0 +1,26 @@
+<!-- inicio del componente -->
+<div class="card mx-auto col-8 mt-5">
+  <div class="card-header">
+    Create a Employee
+  </div>
+  <div class="card-body">
+    <a name="" id="" class="btn btn-danger form-control" routerLink="/employees" role="button">Cancel</a>
+    <form ngNativeValidate [formGroup]="formsEmployeees" (ngSubmit)="ngSubmit()">
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Name</label>
+        <input required type="text" class="form-control" formControlName="nombre" name="" id="" aria-describedby="helpId"
+          placeholder="">
+
+      </div>
+      <div class="mb-3">
+        <label for="correo" class="form-label">Email</label>
+        <input required type="text" class="form-control" formControlName="correo" name="" id="" aria-describedby="helpId"
+          placeholder="">
+
+      </div>
+      <button type="submit" class="btn btn-success form-control">Create</button>
+    </form>
+  </div>
+
+</div>
+<!-- fin del componente -->

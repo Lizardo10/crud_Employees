@@ -1,0 +1,35 @@
+<!-- Componente de renderizacion de los empleados -->
+<div class="card">
+  <div class="card-header">
+    Employees
+  </div>
+  <div class="card-body">
+        <a name="" id="" class="btn btn-success form-control mb-4" routerLink="/employee-create" role="button">Create</a>
+    <div class="table-responsive text-center">
+      <table class="table table-primary">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Ciclo para llamar y renderizar a cada uno de los registros de la base de datos -->
+          <tr *ngFor="let employee of Employees;let iControl=index" class="">
+            <td scope="row">{{employee.id}}</td>
+            <td>{{employee.nombre}}</td>
+            <td>{{employee.correo}}</td>
+            <td><a name="" id="" routerLink="/employee-edit/{{employee.id}}" class="btn btn-warning col-4" href="#"
+                role="button">Edit</a> | <button type="button" (click)="deleteEmployee(employee.id,iControl)" class="btn btn-danger col-4">Delete</button></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</div>
+<!-- Fin del Componente -->
